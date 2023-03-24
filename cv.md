@@ -1,7 +1,7 @@
 # Liya Vysotskaya
 
 ## Junior Frontend Developer
-***
+
 ### Contact information:
 
 - Location: Saint-Petersburg, Russia
@@ -10,6 +10,81 @@
 - Telegram: @liya_vysotskaya
 - Discord: LiyaVysotskaya
 - GitHub: LiyaVysotskaya
+
 ***
 ### About Myself:
 
+***
+### Skills and Proficiency:
+
+- HTML5;
+- CSS3;
+- BEM methodology;
+- JavaScript (basic);
+- C++ (basic);
+- Python (basic);
+- Git;
+- GitHub;
+- Figma;
+- VSCode.
+
+***
+### Code example:
+
+**Tasks:**
+1. *To implement the functions of opening and closing a popup by clicking on a button;*
+2. *Handle editing form submission;*
+3. *By default, when opening the form, the value in the input fields is equal to what is displayed in the profile*
+```
+const editBtn = document.querySelector('.profile__edit-button');
+const addBtn = document.querySelector('.profile__add-button');
+const closeBtn = document.querySelector('.popup__close-button');
+const popup = document.querySelector('.popup');
+const form = document.querySelector('.edit');
+const profileName = document.querySelector('.profile__name');
+const profileDescription = document.querySelector('.profile__description');
+const editName = document.querySelector('.edit__input_profile_name');
+const editDescription = document.querySelector('.edit__input_profile_description');
+
+function openEditWindow() {
+  popup.classList.add('popup_opened');
+  editName.value = profileName.textContent;
+  editDescription.value = profileDescription.textContent;
+}
+
+function closeEditWindow() {
+  popup.classList.remove('popup_opened');
+}
+
+function handleFormSubmit (evt) {
+  evt.preventDefault();
+  profileName.textContent = editName.value;
+  profileDescription.textContent = editDescription.value;
+  closeEditWindow();
+}
+
+editBtn.addEventListener('click', openEditWindow);
+closeBtn.addEventListener('click', closeEditWindow);
+form.addEventListener('submit', handleFormSubmit);
+```
+***
+### Education:
+
+1. Ufa University of Science and Technology, Ufa
+    - Faculty of Applied Mathematics and Informatics;
+2. Yandex.Prakticum 
+    - Course «Web development for beginners»;
+3. RS Schools
+    - Course «JavaScript/Front-end»;
+4. Stepik
+    - Course «JavaScript for beginners»;
+5. Hexlet
+    - Course «JavaScript Basics»;
+6. learnjavascript.ru
+    - JavaScript Manual.
+
+***
+### Languages:
+
+- Russian - Native;
+- English - Intermediate/Upper-intermediate.
